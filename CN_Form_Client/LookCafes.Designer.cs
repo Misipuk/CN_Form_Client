@@ -174,8 +174,9 @@
             this.createCafeB.Name = "createCafeB";
             this.createCafeB.Size = new System.Drawing.Size(165, 65);
             this.createCafeB.TabIndex = 14;
-            this.createCafeB.Text = "Создать кафе";
+            this.createCafeB.Text = "Мое кафе";
             this.createCafeB.UseVisualStyleBackColor = true;
+            this.createCafeB.Click += new System.EventHandler(this.createCafeB_Click);
             // 
             // button5
             // 

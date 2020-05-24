@@ -62,5 +62,14 @@ namespace CN_Form_Client
             addRevForm.Show();
             this.Hide();
         }
+
+        private void createCafeB_Click(object sender, EventArgs e)
+        {
+            createCafeForm crcafeForm = new createCafeForm();
+            crcafeForm.ControlBox = true;
+            crcafeForm.Activate();
+            crcafeForm.Show();
+            this.Hide();
+        }
     }
 }
