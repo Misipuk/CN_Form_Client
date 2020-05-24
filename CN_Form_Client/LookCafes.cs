@@ -99,5 +99,14 @@ namespace CN_Form_Client
             cafeListBox.Items.Clear();
             await loadLst();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MyReviewsForm myReviewsForm = new MyReviewsForm();
+            myReviewsForm.ControlBox = true;
+            myReviewsForm.Activate();
+            myReviewsForm.Show();
+            this.Hide();
+        }
     }
 }

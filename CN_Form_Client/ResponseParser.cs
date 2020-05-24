@@ -86,8 +86,16 @@ namespace CN_Form_Client
                     // header is received, parsing content length
                     // I use regular expressions, but any other method you can think of is ok
                     Regex reg = new Regex("\r\nContent-Length: (.*?)\r\n\r\n");
-                    Match m = reg.Match(headerString);
-                    contentLength = int.Parse(m.Groups[1].ToString());
+                    try
+                    {
+                        Match m = reg.Match(headerString);
+
+                        contentLength = int.Parse(m.Groups[1].ToString());
+                    }
+                    catch (Exception ee)
+                    {
+                        return new string[2] { "404", "404" };
+                    }
                     flag = false;
                     // read the body
                     bodyBuff = new byte[contentLength];

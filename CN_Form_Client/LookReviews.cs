@@ -22,6 +22,11 @@ namespace CN_Form_Client
         {
             Request req = new Request();
             string[] getRevAnswer = req.getRevCafe(Form1.token, id);
+            if (getRevAnswer[0].Contains("404"))
+            {
+                label2.Text = "У данного кафе нет отзывов";
+                return 1;
+            }
             List<Review> reviews = JsonConvert.DeserializeObject<List<Review>>(getRevAnswer[1]);
             for (int i = 0; i < reviews.Count; i++)
             {
@@ -68,6 +73,11 @@ namespace CN_Form_Client
             cafeForm.Activate();
             cafeForm.Show();
             this.Hide();
+        }
+
+        private void LookReviews_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

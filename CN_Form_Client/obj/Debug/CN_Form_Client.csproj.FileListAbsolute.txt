@@ -17,3 +17,4 @@ D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.csproj.
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.LookReviews.resources
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.AddReviewForm.resources
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.createCafeForm.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.MyReviewsForm.resources
