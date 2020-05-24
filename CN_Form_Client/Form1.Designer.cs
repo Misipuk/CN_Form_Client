@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.msgLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loginB
@@ -57,6 +58,7 @@
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(198, 30);
             this.loginBox.TabIndex = 2;
+            this.loginBox.Text = "PanAleha";
             // 
             // passBox
             // 
@@ -66,6 +68,7 @@
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(198, 30);
             this.passBox.TabIndex = 3;
+            this.passBox.Text = "loveAleha1";
             this.passBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // regB
@@ -110,11 +113,20 @@
             this.msgLabel.TabIndex = 7;
             this.msgLabel.Text = "Войдите в систему или зарегестрируйтесь";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(167, 304);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 25);
+            this.label3.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 473);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.msgLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -141,6 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label msgLabel;
+        private System.Windows.Forms.Label label3;
     }
 }
 

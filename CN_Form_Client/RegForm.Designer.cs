@@ -34,6 +34,8 @@
             this.passBox = new System.Windows.Forms.TextBox();
             this.logBox = new System.Windows.Forms.TextBox();
             this.regB = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -88,20 +90,43 @@
             // regB
             // 
             this.regB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.regB.Location = new System.Drawing.Point(181, 345);
+            this.regB.Location = new System.Drawing.Point(351, 331);
             this.regB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regB.Name = "regB";
             this.regB.Size = new System.Drawing.Size(181, 65);
             this.regB.TabIndex = 17;
-            this.regB.Text = "Подтвердить";
+            this.regB.Text = "Назад";
             this.regB.UseVisualStyleBackColor = true;
             this.regB.Click += new System.EventHandler(this.regB_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(68, 331);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 65);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Подтвердить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(442, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
             // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 473);
+            this.ClientSize = new System.Drawing.Size(670, 473);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.regB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -126,5 +151,7 @@
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.TextBox logBox;
         private System.Windows.Forms.Button regB;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
