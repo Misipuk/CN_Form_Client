@@ -55,5 +55,14 @@ namespace CN_Form_Client
         {
             await getrevLst();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LookCafes cafeForm = new LookCafes();
+            cafeForm.ControlBox = true;
+            cafeForm.Activate();
+            cafeForm.Show();
+            this.Hide();
+        }
     }
 }

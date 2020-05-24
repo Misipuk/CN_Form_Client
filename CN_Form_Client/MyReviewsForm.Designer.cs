@@ -44,18 +44,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(442, 570);
+            this.button1.Location = new System.Drawing.Point(487, 499);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 57);
             this.button1.TabIndex = 2;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MyReviewsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.ClientSize = new System.Drawing.Size(1133, 588);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.revListBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
