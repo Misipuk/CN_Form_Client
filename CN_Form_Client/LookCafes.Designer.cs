@@ -33,12 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.CityBox = new System.Windows.Forms.TextBox();
-            this.minStar = new System.Windows.Forms.TextBox();
-            this.maxStar = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
             this.onFiltB = new System.Windows.Forms.Button();
             this.offFiltB = new System.Windows.Forms.Button();
             this.addReviewB = new System.Windows.Forms.Button();
@@ -46,6 +42,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.idBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cafeListBox
@@ -79,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(514, 206);
+            this.label3.Location = new System.Drawing.Point(518, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 25);
             this.label3.TabIndex = 3;
@@ -88,57 +86,25 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(484, 148);
+            this.label4.Location = new System.Drawing.Point(488, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Название:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(480, 270);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Оценка от";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(672, 273);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "до";
-            // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(613, 143);
+            this.nameBox.Location = new System.Drawing.Point(617, 205);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(204, 30);
             this.nameBox.TabIndex = 7;
             // 
-            // CityBox
+            // cityBox
             // 
-            this.CityBox.Location = new System.Drawing.Point(613, 203);
-            this.CityBox.Name = "CityBox";
-            this.CityBox.Size = new System.Drawing.Size(204, 30);
-            this.CityBox.TabIndex = 8;
-            // 
-            // minStar
-            // 
-            this.minStar.Location = new System.Drawing.Point(613, 270);
-            this.minStar.Name = "minStar";
-            this.minStar.Size = new System.Drawing.Size(53, 30);
-            this.minStar.TabIndex = 9;
-            // 
-            // maxStar
-            // 
-            this.maxStar.Location = new System.Drawing.Point(713, 270);
-            this.maxStar.Name = "maxStar";
-            this.maxStar.Size = new System.Drawing.Size(53, 30);
-            this.maxStar.TabIndex = 10;
+            this.cityBox.Location = new System.Drawing.Point(617, 264);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(204, 30);
+            this.cityBox.TabIndex = 8;
             // 
             // onFiltB
             // 
@@ -148,6 +114,7 @@
             this.onFiltB.TabIndex = 11;
             this.onFiltB.Text = "Включить фильтр";
             this.onFiltB.UseVisualStyleBackColor = true;
+            this.onFiltB.Click += new System.EventHandler(this.onFiltB_Click);
             // 
             // offFiltB
             // 
@@ -157,6 +124,7 @@
             this.offFiltB.TabIndex = 12;
             this.offFiltB.Text = "Сбросить фильтр";
             this.offFiltB.UseVisualStyleBackColor = true;
+            this.offFiltB.Click += new System.EventHandler(this.offFiltB_Click);
             // 
             // addReviewB
             // 
@@ -207,11 +175,29 @@
             this.button2.Text = "Мои отзывы";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(495, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Кафе id:";
+            // 
+            // idBox
+            // 
+            this.idBox.Location = new System.Drawing.Point(617, 147);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(204, 30);
+            this.idBox.TabIndex = 19;
+            // 
             // LookCafes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 655);
+            this.Controls.Add(this.idBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
@@ -219,12 +205,8 @@
             this.Controls.Add(this.addReviewB);
             this.Controls.Add(this.offFiltB);
             this.Controls.Add(this.onFiltB);
-            this.Controls.Add(this.maxStar);
-            this.Controls.Add(this.minStar);
-            this.Controls.Add(this.CityBox);
+            this.Controls.Add(this.cityBox);
             this.Controls.Add(this.nameBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -247,12 +229,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.TextBox CityBox;
-        private System.Windows.Forms.TextBox minStar;
-        private System.Windows.Forms.TextBox maxStar;
+        private System.Windows.Forms.TextBox cityBox;
         private System.Windows.Forms.Button onFiltB;
         private System.Windows.Forms.Button offFiltB;
         private System.Windows.Forms.Button addReviewB;
@@ -260,5 +238,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox idBox;
     }
 }

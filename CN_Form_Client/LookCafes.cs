@@ -71,5 +71,33 @@ namespace CN_Form_Client
             crcafeForm.Show();
             this.Hide();
         }
+
+        private async void onFiltB_Click(object sender, EventArgs e)
+        {
+            cafeListBox.Items.Clear();
+            Request req = new Request();
+            string[] parseCafes = req.getCafes(Form1.token);
+            List<Cafe> cafes = JsonConvert.DeserializeObject<List<Cafe>>(parseCafes[1]);
+            for (int i = 0; i < cafes.Count; i++)
+            {
+                if ((idBox.Text == "") | (cafes[i].id.ToString().Contains(idBox.Text)))
+                {
+                    if ((nameBox.Text == "") | (cafes[i].name.ToLower().Contains(nameBox.Text.ToLower())))
+                    {
+                        if ((cityBox.Text == "") | (cafes[i].city.ToLower().Contains(cityBox.Text.ToLower())))
+                        {
+                            cafeListBox.Items.Add((cafes[i].id) + " " + cafes[i].name + " (" + cafes[i].city + ")");
+                        }
+                    }
+                }
+               
+            }
+        }
+
+        private async void offFiltB_Click(object sender, EventArgs e)
+        {
+            cafeListBox.Items.Clear();
+            await loadLst();
+        }
     }
 }
