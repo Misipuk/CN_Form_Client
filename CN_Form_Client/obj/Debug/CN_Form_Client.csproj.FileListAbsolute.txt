@@ -1,0 +1,12 @@
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\CN_Form_Client.exe.config
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\CN_Form_Client.exe
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\CN_Form_Client.pdb
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.csprojAssemblyReference.cache
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.Form1.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.Properties.Resources.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.RegForm.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.csproj.GenerateResource.cache
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.csproj.CoreCompileInputs.cache
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.exe
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.pdb
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.LookCafes.resources
