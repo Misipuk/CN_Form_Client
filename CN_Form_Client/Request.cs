@@ -225,6 +225,32 @@ namespace CN_Form_Client
             return ResponseParser.parseResReg(socket);
         }
 
+        public string[] getCafeMedia(String token, int cafeid, string path)
+        {
+            Socket socket = connection();
+            var fileName = path;
+            // byte[] body = new byte[5];
+
+
+
+            //int cont_length = body.Length;
+
+
+            string request_url = String.Format("GET /cafe/media?cafe_id={0} HTTP/1.1 \n" +
+            "Host: MyServer\n" +
+            "Accept: application/json\n" +
+            "Authorization: {1}\n" +
+            "\n", cafeid, token);
+            //request_url = request_url + json + "\n";
+
+
+            //Console.WriteLine(json);
+            Console.WriteLine(request_url);
+            int response = socket.Send(Encoding.UTF8.GetBytes(request_url));
+            return ResponseParser.parseRes(socket);
+            return ResponseParser.parseResReg(socket);
+        }
+
     }
 }
 

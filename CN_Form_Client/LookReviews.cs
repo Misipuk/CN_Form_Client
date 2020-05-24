@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -78,6 +79,35 @@ namespace CN_Form_Client
         private void LookReviews_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            Request req = new Request();
+            var fileName = @"D:\sem6_protocols\CN_Form_Client\photos";
+            Console.WriteLine('\n');
+            Console.WriteLine("Get cafe media download \n\n");
+            string[] parseGetMedia = req.getCafeMedia(Form1.token, 1, fileName);
+            Console.WriteLine(parseGetMedia[0]);
+            Console.WriteLine('\n');
+            //Console.WriteLine(parseGetMedia[1]);
+            List<MediaFile> files = JsonConvert.DeserializeObject<List<MediaFile>>(parseGetMedia[1]);
+            Console.WriteLine(files[0].type);
+            var base64EncodedBytes = System.Convert.FromBase64String(files[0].bcd);
+            int numBytesToRead = base64EncodedBytes.Length;
+            fileName = fileName + "\\" + files[0].id + ".jpg";
+            try
+            {
+                using (FileStream fsNew = new FileStream(fileName,
+                FileMode.Create, FileAccess.Write))
+                {
+                    fsNew.Write(base64EncodedBytes, 0, numBytesToRead);
+                }
+            }
+            catch (Exception ee)
+            {
+
+            }
         }
     }
 }

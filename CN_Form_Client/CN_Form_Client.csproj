@@ -80,6 +80,7 @@
     <Compile Include="LookReviews.Designer.cs">
       <DependentUpon>LookReviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="MediaFile.cs" />
     <Compile Include="MediaUploadForm.cs">
       <SubType>Form</SubType>
     </Compile>
