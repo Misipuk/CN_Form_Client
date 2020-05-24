@@ -14,3 +14,5 @@ D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\Newtonsoft.Json.dll
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\Newtonsoft.Json.pdb
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\bin\Debug\Newtonsoft.Json.xml
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.csproj.CopyComplete
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.LookReviews.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.AddReviewForm.resources

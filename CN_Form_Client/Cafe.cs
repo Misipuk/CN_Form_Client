@@ -8,6 +8,7 @@ namespace CN_Form_Client
 {
     class Cafe
     {
+        public int id;
         public string owner;
         public string name;
         public string des;

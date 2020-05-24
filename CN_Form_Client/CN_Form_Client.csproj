@@ -49,7 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddReviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReviewForm.Designer.cs">
+      <DependentUpon>AddReviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cafe.cs" />
+    <Compile Include="createCafeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createCafeForm.Designer.cs">
+      <DependentUpon>createCafeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="LookCafes.Designer.cs">
       <DependentUpon>LookCafes.cs</DependentUpon>
     </Compile>
+    <Compile Include="LookReviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookReviews.Designer.cs">
+      <DependentUpon>LookReviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegForm.cs">
@@ -73,11 +91,20 @@
     <Compile Include="Request.cs" />
     <Compile Include="ResponseParser.cs" />
     <Compile Include="Review.cs" />
+    <EmbeddedResource Include="AddReviewForm.resx">
+      <DependentUpon>AddReviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createCafeForm.resx">
+      <DependentUpon>createCafeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookCafes.resx">
       <DependentUpon>LookCafes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookReviews.resx">
+      <DependentUpon>LookReviews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

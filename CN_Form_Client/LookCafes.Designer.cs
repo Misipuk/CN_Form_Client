@@ -44,6 +44,8 @@
             this.addReviewB = new System.Windows.Forms.Button();
             this.createCafeB = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cafeListBox
@@ -158,16 +160,17 @@
             // 
             // addReviewB
             // 
-            this.addReviewB.Location = new System.Drawing.Point(268, 579);
+            this.addReviewB.Location = new System.Drawing.Point(198, 578);
             this.addReviewB.Name = "addReviewB";
             this.addReviewB.Size = new System.Drawing.Size(165, 65);
             this.addReviewB.TabIndex = 13;
             this.addReviewB.Text = "Добавить отзыв";
             this.addReviewB.UseVisualStyleBackColor = true;
+            this.addReviewB.Click += new System.EventHandler(this.addReviewB_Click);
             // 
             // createCafeB
             // 
-            this.createCafeB.Location = new System.Drawing.Point(467, 578);
+            this.createCafeB.Location = new System.Drawing.Point(601, 578);
             this.createCafeB.Name = "createCafeB";
             this.createCafeB.Size = new System.Drawing.Size(165, 65);
             this.createCafeB.TabIndex = 14;
@@ -184,11 +187,32 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 578);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 65);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Посмотреть отзывы";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(396, 578);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 65);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Мои отзывы";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // LookCafes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 655);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.createCafeB);
             this.Controls.Add(this.addReviewB);
@@ -233,5 +257,7 @@
         private System.Windows.Forms.Button addReviewB;
         private System.Windows.Forms.Button createCafeB;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

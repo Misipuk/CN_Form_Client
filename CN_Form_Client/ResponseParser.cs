@@ -52,13 +52,17 @@ namespace CN_Form_Client
             string[] sep = new string[] { "\r\n\r\n" };
             string[] answer = headerString.Split(sep, System.StringSplitOptions.RemoveEmptyEntries);
             string[] parseAnswer = new string[2];
-            for (int i = 0; i < 2; i++)
+            if (answer.Length >= 2)
             {
-                parseAnswer[i] = answer[i].Trim('\r', '\n', ' ');
-                //Console.WriteLine(i);
-                //Console.WriteLine(parseAnswer[i]);
+                for (int i = 0; i < 2; i++)
+                {
+                    parseAnswer[i] = answer[i].Trim('\r', '\n', ' ');
+                    //Console.WriteLine(i);
+                    Console.WriteLine(parseAnswer[i]);
 
+                }
             }
+           
 
 
             socket.Close();

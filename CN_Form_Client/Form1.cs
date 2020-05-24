@@ -48,7 +48,11 @@ namespace CN_Form_Client
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            await Login();
+            if(loginBox.Text!="" & passBox.Text != "")
+            {
+                await Login();
+            }
+            
             //LookCafes cafeForm = new LookCafes();
             //cafeForm.ControlBox = true;
             //cafeForm.Activate();
