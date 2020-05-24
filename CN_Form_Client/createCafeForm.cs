@@ -30,6 +30,7 @@ namespace CN_Form_Client
                     textBox1.Text = cafes[i].name;
                     textBox2.Text = cafes[i].city;
                     richTextBox1.Text = cafes[i].des;
+                    button3.Visible = true;
                     label5.Text = "Данные вашего кафе введены в форму";
 
                 }
@@ -49,6 +50,7 @@ namespace CN_Form_Client
             if (addCafeAnswer[0].Contains("204"))
             {
                 label5.Text = "Выполнено";
+                button3.Visible = true;
             }
             if ((textBox1.Text == "") & (textBox2.Text == "") & (richTextBox1.Text == ""))
             {
@@ -81,6 +83,15 @@ namespace CN_Form_Client
             cafeForm.ControlBox = true;
             cafeForm.Activate();
             cafeForm.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MediaUploadForm mediaForm = new MediaUploadForm();
+            mediaForm.ControlBox = true;
+            mediaForm.Activate();
+            mediaForm.Show();
             this.Hide();
         }
     }

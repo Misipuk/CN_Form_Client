@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace CN_Form_Client
 {
@@ -158,6 +159,69 @@ namespace CN_Form_Client
             //Console.WriteLine(json);
             Console.WriteLine(request_url);
             int response = socket.Send(Encoding.UTF8.GetBytes(request_url));
+            return ResponseParser.parseResReg(socket);
+        }
+
+        public string[] sendCafeMedia(String token, int cafeid, string path)
+        {
+            Socket socket = connection();
+            var fileName = path;
+            byte[] body = new byte[5];
+            try
+            {
+
+                using (FileStream fsSource = new FileStream(path,
+                    FileMode.Open, FileAccess.Read))
+                {
+
+                    // Read the source file into a byte array.
+                    byte[] bytes = new byte[fsSource.Length];
+                    int numBytesToRead = (int)fsSource.Length;
+                    int numBytesRead = 0;
+                    while (numBytesToRead > 0)
+                    {
+                        // Read may return anything from 0 to numBytesToRead.
+                        int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
+
+                        // Break when the end of the file is reached.
+                        if (n == 0)
+                            break;
+
+                        numBytesRead += n;
+                        numBytesToRead -= n;
+                    }
+                    numBytesToRead = bytes.Length;
+
+                    // Write the byte array to the other FileStream.
+                    body = bytes;
+                }
+            }
+            catch (FileNotFoundException ioEx)
+            {
+                Console.WriteLine(ioEx.Message);
+            }
+
+
+
+
+
+            int cont_length = body.Length;
+
+
+            string request_url = String.Format("POST /cafe/media?cafe_id={0}&type=photo HTTP/1.1 \n" +
+            "Host: MyServer\n" +
+            "Accept: application/json\n" +
+            "Content-Length: {1}\n" +
+            "Authorization: {2}\n" +
+            "\n", cafeid, cont_length, token);
+            //request_url = request_url + json + "\n";
+
+
+            //Console.WriteLine(json);
+            Console.WriteLine(request_url);
+            int response = socket.Send(Encoding.UTF8.GetBytes(request_url));
+            response = socket.Send(body);
+            response = socket.Send(Encoding.UTF8.GetBytes(new char[1] { '\n' }));
             return ResponseParser.parseResReg(socket);
         }
 

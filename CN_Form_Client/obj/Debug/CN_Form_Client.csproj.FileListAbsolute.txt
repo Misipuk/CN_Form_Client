@@ -18,3 +18,4 @@ D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.LookRev
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.AddReviewForm.resources
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.createCafeForm.resources
 D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.MyReviewsForm.resources
+D:\sem6_protocols\CN_Form_Client\CN_Form_Client\obj\Debug\CN_Form_Client.MediaUploadForm.resources
